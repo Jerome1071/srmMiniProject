@@ -1,0 +1,83 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the entire form */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* Form container for toggle animation */
+.form-container {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Card styling for both signin and signup forms */
+.card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 7%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Sign In form */
+.signin {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Sign Up form */
+.signup {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Hidden state */
+.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Sign Up mode */
+.sign-up-mode .signin {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.sign-up-mode .signup {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Toggle link styling */
+.toggle-link {
+  color: purple;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}
